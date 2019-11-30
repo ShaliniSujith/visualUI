@@ -1,0 +1,47 @@
+{
+    "endPoints": {
+        "EmirateRecipes": "experience/dining/recipe",
+        "FamilyBenefits": "emirates-skywards/family-benefits",
+	    "iceInflightEntertainment": "experience/inflight-entertainment/ice",
+        "IndexCategory" : "help/faqs",
+        "photoGallery": "experience/our-fleet/photo-gallery/",
+        "EmiratesReview": "experience/ratings-and-reviews/emirates-review",
+        "FoodBeverageReview": "experience/ratings-and-reviews/food-and-beverage-review",
+        "MealsReview": "experience/ratings-and-reviews/meals-review",
+        "worldwide": "experience/our-lounges/worldwide",
+        "Sponsorships": "about-us/sponsorships",
+        "LocalOffices": "help/offices",
+        "LocalOfficesDetail": "help/offices/DXB",
+        "EmiratesPass": "experience/my-emirates-pass",
+        "EmiratesPassMindBodyCategory": "experience/my-emirates-pass?offertab=mind-and-body",
+        "EmiratesPassService":"service/emirates-pass-offers?lang=en",
+        "CategoryLanding": "help/faq-topics/baggage-and-lost-property",
+        "ManageAccount": "manage-account/manage-account.aspx",
+        "MyStatement": "manage-account/my-statement/",
+        "PlatinumBenefits": "manage-account/platinum-benefits/platinum-benefits.aspx"
+    },
+    "ssoAuthenticationUrls": {
+        "EkMobileQA": "https://ekmobileqa:Htm15%234321@ekmobileqa.ek.aero",
+        "EkMobileQA2": "https://ekmobileqa:Htm15%234321@ekmobileqa2.ek.aero",
+        "Flystaging5": "https://securestaging:Emirates%234321@flystaging5.ek.aero",
+        "Flystaging14": "https://securestaging:Emirates%234321@flystaging14.ek.aero",
+        "Flystaging6": "https://securestaging:Emirates%234321@flystaging6.ek.aero",
+        "Fly3": "https://businessuser:Fly3%24biz%40gbl1b3@fly3.emirates.com",
+        "Flystaging6a": "https://securestaging:Emirates%234321@flystaging6.emirates.com",
+        "Flystaging19": "https://securestaging:Emirates%234321@flystaging19.ek.aero"
+    },
+    "baseUrls": {
+        "eolsit9": "https://eolsit9.ek.aero/",
+        "eolsit10": "https://eolsit10.ek.aero/",
+        "eolsitMYA": "https://eolsit.ek.aero/account/"
+    },
+    "country": {
+        "global": "global",
+        "uk": "uk",
+        "ae": "ae"
+    },
+    "language": {
+        "english": "english",
+        "arabic": "arabic"
+    }
+}

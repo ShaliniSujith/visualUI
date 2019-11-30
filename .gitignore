@@ -1,0 +1,9 @@
+*.iml
+.idea/*
+reports/*
+node_modules/*
+allure-report
+tests/data/*
+.nyc_output
+coverage
+debug.log
