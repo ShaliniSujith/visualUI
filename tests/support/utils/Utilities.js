@@ -34,6 +34,5 @@ class Utilities {
             console.log(`No folder found ${path}`);
         }
     }
-
 }
 module.exports = new Utilities;

@@ -1,10 +1,9 @@
 class TransactionTable {
-
     constructor(selector) {
         this.table = $(selector);
     }
 
-    get amountHeader() { return this.table.$('th#amount'); }
+    get amountHeader() {return this.table.$('th#amount');}
 
     clickAmountHeader() {
         this.amountHeader.click();
@@ -18,7 +17,7 @@ class TransactionTable {
 
     getRowsCSS() {
         // return this.getRows().getCSSProperty('border-radius');
-        return this.getRows().map(function (element) { return element.getCSSProperty('border-radius'); });
+        return this.getRows().map(function(element) {return element.getCSSProperty('border-radius');});
     }
 
 
@@ -29,8 +28,7 @@ class TransactionTable {
 
     getColumnText(index) {
         const column = this.getColumn(index);
-        return column.map(function (element) { return element.getText(); });
+        return column.map(function(element) {return element.getText();});
     }
-
 }
 module.exports = TransactionTable;

@@ -24,8 +24,8 @@ const inputs = [
 ];
 
 
-describe('Data driven verification with invalid combinations', function () {
-    inputs.forEach(function (input) {
+describe('Data driven verification with invalid combinations', function() {
+    inputs.forEach(function(input) {
         let testName = input.test;
 
         if (input.expectedError) {
@@ -35,7 +35,7 @@ describe('Data driven verification with invalid combinations', function () {
             testName += ` should pass validation`;
         }
 
-        it(testName, function () {
+        it(testName, function() {
             browser.url('https://demo.applitools.com/hackathon.html');
             demo.forms.fillLoginForm(input.username, input.password);
             const errorMessages = demo.loginError.getText();
@@ -48,21 +48,21 @@ describe('Data driven verification with invalid combinations', function () {
     });
 });
 
-describe('Logged in scenarios', function () {
-    before('User successfully logs in to the form', function () {
+describe('Logged in scenarios', function() {
+    before('User successfully logs in to the form', function() {
         browser.url('https://demo.applitools.com/hackathon.html');
         demo.forms.fillLoginForm('John', 'Smith');
     });
 
-    it('should display loggedin user icon when user successfully logged in', function () {
+    it('should display loggedin user icon when user successfully logged in', function() {
         expect(demo.loggedInUserIcon.isDisplayed()).to.be.true;
     });
 
-    it('should display recent transactions table', function () {
+    it('should display recent transactions table', function() {
         expect(demo.userOverview.transactionTable.table.isDisplayed()).to.be.true;
     });
 
-    it('should display amounts column in ascending order when clicked', function () {
+    it('should display amounts column in ascending order when clicked', function() {
         demo.userOverview.transactionTable.clickAmountHeader();
         const amountValues = demo.userOverview.transactionTable.getColumnText(5);
         expect(amountValues, "Amount is not in ascending order").to.be.deep.equal(['- 320.00 USD',
@@ -73,31 +73,31 @@ describe('Logged in scenarios', function () {
             '+ 1,250.00 USD']);
     });
 
-    it('should display each row in tact after sorting', function () {
+    it('should display each row in tact after sorting', function() {
         demo.userOverview.transactionTable.clickAmountHeader();
         const rowsProp = demo.userOverview.transactionTable.getRowsCSS();
-        rowsProp.map(function (element) { return expect(element, "Table rows have a border radius as 4px").to.have.property('value', '4px'); });
+        rowsProp.map(function(element) {return expect(element, "Table rows have a border radius as 4px").to.have.property('value', '4px');});
     });
 });
 
-describe.only('Dynamic content Test', function () {
-    before('User successfully logs in to the form', function () {
+describe.only('Dynamic content Test', function() {
+    before('User successfully logs in to the form', function() {
         browser.url('https://demo.applitools.com/hackathonApp.html?showAd=true');
     });
 
-    it('should display Sale 1 img', function () {
+    it('should display Sale 1 img', function() {
         expect(demo.userOverview.flashSale1.isDisplayed()).to.be.true;
     });
 
-    it('should display Sale 1 img src as img/flashSale.gif', function () {
+    it('should display Sale 1 img src as img/flashSale.gif', function() {
         expect(demo.userOverview.getflashSale1ImgSrc()).to.contain('img/flashSale.gif');
     });
 
-    it('should display Sale 2 img', function () {
+    it('should display Sale 2 img', function() {
         expect(demo.userOverview.flashSale2.isDisplayed()).to.be.true;
     });
 
-    it('should display Sale 2 img src as img/flashSale2.gif', function () {
+    it('should display Sale 2 img src as img/flashSale2.gif', function() {
         expect(demo.userOverview.getflashSale2ImgSrc()).to.contain('img/flashSale2.gif');
     });
 });

@@ -35,7 +35,7 @@ class Browser {
             "browserName": 'chrome',
             "acceptInsecureCerts": true,
             'goog:chromeOptions': {
-                mobileEmulation: { deviceName: device },
+                mobileEmulation: {deviceName: device},
                 args: chromeArgs,
                 useAutomationExtension: false,
             },

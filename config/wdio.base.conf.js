@@ -35,15 +35,15 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onPrepare: function (config, capabilities) {
+    onPrepare: function(config, capabilities) {
         utilities.reportCleanUp();
     },
 
-    beforeSession: function (config, capabilities, specs) {
+    beforeSession: function(config, capabilities, specs) {
         require('@babel/register');
     },
 
-    before: function () {
+    before: function() {
         chai.use(chaiAsPromised);
         global.expect = chai.expect;
         global.assert = chai.assert;
@@ -53,7 +53,7 @@ exports.config = {
         global.responsive = browser.capabilities.mobileEmulationEnabled;
     },
 
-    afterTest: function (test) {
+    afterTest: function(test) {
         if (test.error !== undefined) {
             browser.takeScreenshot();
         }

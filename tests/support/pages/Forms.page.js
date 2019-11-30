@@ -3,11 +3,11 @@ class Forms {
         this.form = $(selector);
     }
 
-    get passwordIcon() { return $('.os-icon-fingerprint'); }
+    get passwordIcon() {return $('.os-icon-fingerprint');}
 
-    get userNameInput() { return this.form.$('#username'); }
+    get userNameInput() {return this.form.$('#username');}
 
-    get passwordInput() { return this.form.$('#password'); }
+    get passwordInput() {return this.form.$('#password');}
 
     getLabels() {
         return this.form.$$('label');
@@ -19,7 +19,7 @@ class Forms {
 
     getLabelText() {
         const label = this.getLabels();
-        return label.map(function (element) { return element.getText(); });
+        return label.map(function(element) {return element.getText();});
     }
 
     getUserIcon() {
@@ -40,12 +40,12 @@ class Forms {
 
     getSMLinkSrc() {
         const label = this.getSocialMediaIconLinks();
-        return label.map(function (element) { return element.getAttribute('src'); });
+        return label.map(function(element) {return element.getAttribute('src');});
     }
 
     getSMIconSrc() {
         const label = this.getSocialMediaIcons();
-        return label.map(function (element) { return element.getAttribute('src'); });
+        return label.map(function(element) {return element.getAttribute('src');});
     }
 
     getLoginBtn() {

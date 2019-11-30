@@ -1,13 +1,12 @@
 const Table = require('../pages/TransactionTable.page');
 class Overview {
-
     constructor(selector) {
         this.overview = $(selector);
     }
 
-    get transactionTable() { return new Table('#transactionsTable'); }
-    get flashSale1() { return this.overview.$('#flashSale img'); }
-    get flashSale2() { return this.overview.$('#flashSale2 img'); }
+    get transactionTable() {return new Table('#transactionsTable');}
+    get flashSale1() {return this.overview.$('#flashSale img');}
+    get flashSale2() {return this.overview.$('#flashSale2 img');}
 
     getflashSale1ImgSrc() {
         return this.flashSale1.getAttribute('src');
