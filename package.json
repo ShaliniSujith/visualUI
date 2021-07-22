@@ -35,7 +35,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "xlsx": "^0.14.2"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@wdio/cli": "^5.7.5",
